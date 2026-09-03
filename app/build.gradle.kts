@@ -1,8 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.googleService)
 }
 
 android {
+
+    buildFeatures {
+        viewBinding = true
+    }
+
     namespace = "com.example.appgimnasio"
     compileSdk {
         version = release(37)
