@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Paleta inspirada en la referencia: carbón, oliva y lima. -->
+    <color name="black">#FF12130F</color>
+    <color name="white">#FFF1F0DF</color>
+    <color name="app_background">#FF12130F</color>
+    <color name="surface">#FF191A13</color>
+    <color name="surface_variant">#FF22231A</color>
+    <color name="outline">#FF35372A</color>
+    <color name="text_primary">#FFF1F0DF</color>
+    <color name="text_secondary">#FF979889</color>
+    <color name="lime">#FFD7FF43</color>
+    <color name="lime_dark">#FFB8DB32</color>
+    <color name="on_lime">#FF151609</color>
+    <color name="warning">#FFFF7043</color>
 </resources>

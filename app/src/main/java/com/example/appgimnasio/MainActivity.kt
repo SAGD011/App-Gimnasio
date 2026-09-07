@@ -20,15 +20,15 @@ class MainActivity : AppCompatActivity() {
 
         binding.BottomNV.setOnItemSelectedListener { item ->
             when(item.itemId){
-                R.id.Item_Inicio->{
+                R.id.Item_Miembros->{
                     verFragmentInicio()
                     true
                 }
-                R.id.Item_Chats->{
+                R.id.Item_Gestion->{
                     verFragmentChats()
                     true
                 }
-                R.id.Item_Mis_Anuncios->{
+                R.id.Item_Inicio->{
                     verFragmentMisAnuncios()
                     true
                 }
