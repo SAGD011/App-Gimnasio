@@ -48,23 +48,27 @@ class MainActivity : AppCompatActivity() {
         val fragment = FragmentInicio()
         val fragmentTransition = supportFragmentManager.beginTransaction()
         fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentInicio")
+        fragmentTransition.commit()
     }
     private fun verFragmentChats(){
         binding.TituloRL.text="Chats"
         val fragment = FragmentChats()
         val fragmentTransition = supportFragmentManager.beginTransaction()
         fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentChats")
+        fragmentTransition.commit()
     }
     private fun verFragmentMisAnuncios(){
         binding.TituloRL.text="Mis anuncios"
         val fragment = FragmentMisAnuncios()
         val fragmentTransition = supportFragmentManager.beginTransaction()
         fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentMisAnuncios")
+        fragmentTransition.commit()
     }
     private fun verFragmentCuenta(){
         binding.TituloRL.text="Cuenta"
         val fragment = FragmentCuenta()
         val fragmentTransition = supportFragmentManager.beginTransaction()
         fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentCuenta")
+        fragmentTransition.commit()
     }
 }
