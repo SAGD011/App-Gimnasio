@@ -51,10 +51,7 @@
         android:layout_alignParentBottom="true"
         app:menu="@menu/mi_menu"
         app:labelVisibilityMode="labeled"
-        android:background="@color/surface"
-        app:itemActiveIndicatorStyle="@color/material_on_surface_disabled"
-        app:itemIconTint="@color/navigation_item_tint"
-        app:itemTextColor="@color/navigation_item_tint"
+        android:background="@color/surface_variant"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
