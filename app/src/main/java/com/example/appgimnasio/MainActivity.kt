@@ -3,10 +3,10 @@ package com.example.appgimnasio
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.appgimnasio.Fragmentos.FragmentChats
+import com.example.appgimnasio.Fragmentos.FragmentGestion
 import com.example.appgimnasio.Fragmentos.FragmentCuenta
 import com.example.appgimnasio.Fragmentos.FragmentInicio
-import com.example.appgimnasio.Fragmentos.FragmentMisAnuncios
+import com.example.appgimnasio.Fragmentos.FragmentMiembros
 import com.example.appgimnasio.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -22,20 +22,18 @@ class MainActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         comprobarSesion()
 
-        verFragmentInicio()
-
         binding.BottomNV.setOnItemSelectedListener { item ->
             when(item.itemId){
                 R.id.Item_Miembros->{
-                    verFragmentInicio()
+                    verFragmentMiembros()
                     true
                 }
                 R.id.Item_Gestion->{
-                    verFragmentChats()
+                    verFragmentGestion()
                     true
                 }
                 R.id.Item_Inicio->{
-                    verFragmentMisAnuncios()
+                    verFragmentInicio()
                     true
                 }
                 R.id.Item_Cuenta->{
@@ -47,6 +45,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        binding.BottomNV.selectedItemId = R.id.Item_Inicio
     }
 
 
@@ -57,28 +56,28 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun verFragmentInicio(){
-    binding.TituloRL.text="Inicio"
+        binding.TituloRL.text = getString(R.string.Item_Inicio)
         val fragment = FragmentInicio()
         val fragmentTransition = supportFragmentManager.beginTransaction()
         fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentInicio")
         fragmentTransition.commit()
     }
-    private fun verFragmentChats(){
-        binding.TituloRL.text="Chats"
-        val fragment = FragmentChats()
+    private fun verFragmentMiembros(){
+        binding.TituloRL.text = getString(R.string.Item_Miembros)
+        val fragment = FragmentMiembros()
         val fragmentTransition = supportFragmentManager.beginTransaction()
-        fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentChats")
+        fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentMiembros")
         fragmentTransition.commit()
     }
-    private fun verFragmentMisAnuncios(){
-        binding.TituloRL.text="Mis anuncios"
-        val fragment = FragmentMisAnuncios()
+    private fun verFragmentGestion(){
+        binding.TituloRL.text = getString(R.string.Item_Gestion)
+        val fragment = FragmentGestion()
         val fragmentTransition = supportFragmentManager.beginTransaction()
-        fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentMisAnuncios")
+        fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentGestion")
         fragmentTransition.commit()
     }
     private fun verFragmentCuenta(){
-        binding.TituloRL.text="Cuenta"
+        binding.TituloRL.text = getString(R.string.Item_Cuenta)
         val fragment = FragmentCuenta()
         val fragmentTransition = supportFragmentManager.beginTransaction()
         fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentCuenta")
