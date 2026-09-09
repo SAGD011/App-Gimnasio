@@ -59,7 +59,7 @@ class Registro_email : AppCompatActivity() {
             binding.EtRPassword.error = "Repita el password"
             binding.EtRPassword.requestFocus()
         }
-        else if (password.contains("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[\$@\$!%*?&])[A-Za-z\\d\$@\$!%*?&]{8,}\$")){
+        else if (!password.matches(Regex("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"))){
             binding.EtRPassword.error = "Añada: una mayuscula /n una minuscula /n un numero /n un caracter especial /n longitud de 8 caracteres"
             binding.EtRPassword.requestFocus()
         }
