@@ -4,10 +4,12 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.appgimnasio.MainActivity
 import com.example.appgimnasio.R
 import com.example.appgimnasio.Registro_email
 import com.example.appgimnasio.databinding.ActivityLoginEmailBinding
@@ -72,12 +74,21 @@ class Login_email : AppCompatActivity() {
 
         firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnSuccessListener {
+                progressDialog.dismiss()
+                startActivity(Intent(this, MainActivity::class.java))
+                finishAffinity()
+                Toast.makeText(this,
+                    "Bienvenido",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            .addOnFailureListener { e->
+                progressDialog.dismiss()
+                Toast.makeText(this,
+                    "No se pudo iniciar sesion debido a ${e.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
 
             }
-            .addOnFailureListener {
-
-            }
-
-
     }
 }

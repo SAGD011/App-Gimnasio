@@ -2,6 +2,8 @@
 
     <string name="app_name">App Gimnasio</string>
 
+    <string name="default_web_client_id"> 868250782126-41mi5uak25th377dv5if8ga893gvqadm.apps.googleusercontent.com </string>
+
     <string name="Item_Miembros">Miembros</string>
     <string name="Item_Gestion">Gestión</string>
     <string name="Item_vender">Vender</string>

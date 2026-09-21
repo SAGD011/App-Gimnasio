@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "868250782126",
+    "firebase_url": "https://app-gym-be8b5-default-rtdb.firebaseio.com",
     "project_id": "app-gym-be8b5",
     "storage_bucket": "app-gym-be8b5.firebasestorage.app"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.example.appgimnasio"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "868250782126-5p18kp3pnrmsl1cunca5gkrigtflhd3q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appgimnasio",
+            "certificate_hash": "d27ee6b9389b92a20e95a07433bd4c57a06eb792"
+          }
+        },
+        {
+          "client_id": "868250782126-41mi5uak25th377dv5if8ga893gvqadm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBzDll1pYXm9SuRdPAISyQ5KWYl0BLcW0I"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868250782126-41mi5uak25th377dv5if8ga893gvqadm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
