@@ -45,6 +45,8 @@ dependencies {
     implementation(libs.firebaseAuth)
     implementation(libs.firebaseDatabase)
 
+    implementation(libs.loginGoogle)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
     testImplementation(libs.junit)
