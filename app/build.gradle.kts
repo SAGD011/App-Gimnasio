@@ -46,6 +46,8 @@ dependencies {
     implementation(libs.firebaseDatabase)
 
     implementation(libs.loginGoogle)
+    implementation(libs.glide)
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
