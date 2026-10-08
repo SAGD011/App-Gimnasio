@@ -3,7 +3,7 @@ package com.example.appgimnasio
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.appgimnasio.Fragmentos.FragmentGestion
+import com.example.appgimnasio.Fragmentos.FragmentProductos
 import com.example.appgimnasio.Fragmentos.FragmentCuenta
 import com.example.appgimnasio.Fragmentos.FragmentInicio
 import com.example.appgimnasio.Fragmentos.FragmentMiembros
@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
                     verFragmentMiembros()
                     true
                 }
-                R.id.Item_Gestion->{
-                    verFragmentGestion()
+                R.id.Item_Productos->{
+                    verFragmentProductos()
                     true
                 }
                 R.id.Item_Inicio->{
@@ -45,9 +45,14 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        binding.BottomNV.selectedItemId = R.id.Item_Inicio
+        binding.BottomNV.selectedItemId = savedInstanceState?.getInt("seccion", R.id.Item_Inicio) ?: R.id.Item_Inicio
     }
 
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt("seccion", binding.BottomNV.selectedItemId)
+        super.onSaveInstanceState(outState)
+    }
 
     private fun comprobarSesion(){
         if (firebaseAuth.currentUser == null){
@@ -69,11 +74,12 @@ class MainActivity : AppCompatActivity() {
         fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentMiembros")
         fragmentTransition.commit()
     }
-    private fun verFragmentGestion(){
-        binding.TituloRL.text = getString(R.string.Item_Gestion)
-        val fragment = FragmentGestion()
+    private fun verFragmentProductos(){
+        binding.TituloRL.text = getString(R.string.Item_Productos)
+        if (supportFragmentManager.findFragmentById(binding.FragmentL1.id) is FragmentProductos) return
+        val fragment = FragmentProductos()
         val fragmentTransition = supportFragmentManager.beginTransaction()
-        fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentGestion")
+        fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentProductos")
         fragmentTransition.commit()
     }
     private fun verFragmentCuenta(){

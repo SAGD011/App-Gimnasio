@@ -6,15 +6,17 @@
         android:icon="@drawable/ic_miembros"/>
 
 
-    <item android:id="@+id/Item_Gestion"
-        android:title="@string/Item_Gestion"
-        android:icon="@drawable/ic_gestion"/>
+    <item android:id="@+id/Item_Productos"
+        android:title="@string/Item_Productos"
+        android:icon="@drawable/ic_productos"/>
 
 
-    <item android:id="@+id/Item_vender"
-        android:title="@string/Item_vender"
-        android:enabled="false"/>
 
+
+
+    <item android:id="@+id/Item_Agregar"
+        android:title="@string/Item_Agregar"
+        android:enabled="false" />
 
     <item android:id="@+id/Item_Inicio"
         android:title="@string/Item_Inicio"
