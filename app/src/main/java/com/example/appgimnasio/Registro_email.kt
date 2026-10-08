@@ -47,6 +47,7 @@ class Registro_email : AppCompatActivity() {
         password = binding.EtPassword.text.toString().trim()
         r_password = binding.EtRPassword.text.toString().trim()
 
+
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             binding.EtEmail.error = "Email invalido"
             binding.EtEmail.requestFocus()
@@ -59,18 +60,22 @@ class Registro_email : AppCompatActivity() {
             binding.EtRPassword.error = "Repita el password"
             binding.EtRPassword.requestFocus()
         }
-        else if (!password.matches(Regex("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"))){
-            binding.EtRPassword.error = "Añada: una mayuscula /n una minuscula /n un numero /n un caracter especial /n longitud de 8 caracteres"
-            binding.EtRPassword.requestFocus()
-        }
         else if (password != r_password){
             binding.EtRPassword.error = "No coinciden"
+            binding.EtRPassword.requestFocus()
+        }
+        else if (!password.matches(Regex("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"))){
+            binding.EtRPassword.error = "Añada:\n " +
+                    "•Una mayuscula \n" +
+                    "•Una minuscula \n" +
+                    "•Un numero \n" +
+                    "•Un caracter especial \n" +
+                    "•Longitud minima de 8 caracteres \n"
             binding.EtRPassword.requestFocus()
         }
         else{
             resgistrarUsuario()
         }
-        
     }
 
     private fun resgistrarUsuario(){

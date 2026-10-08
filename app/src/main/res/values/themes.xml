@@ -9,8 +9,16 @@
         <item name="colorOnPrimary">@color/on_lime</item>
         <item name="colorSecondary">@color/lime_dark</item>
         <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceContainer">@color/surface</item>
+        <item name="colorSurfaceContainerHigh">@color/surface</item>
+        <item name="colorSurfaceContainerHighest">@color/surface_variant</item>
+        <item name="android:textColorHint">@color/text_secondary</item>
         <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
     </style>
 
     <style name="Theme.AppGimnasio" parent="Base.Theme.AppGimnasio" />
+    <style name="NavigationIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/outline</item>
+    </style>
 </resources>

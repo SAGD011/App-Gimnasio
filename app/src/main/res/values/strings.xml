@@ -5,8 +5,8 @@
     <string name="default_web_client_id"> 868250782126-41mi5uak25th377dv5if8ga893gvqadm.apps.googleusercontent.com </string>
 
     <string name="Item_Miembros">Miembros</string>
-    <string name="Item_Gestion">Gestión</string>
-    <string name="Item_vender">Vender</string>
+    <string name="Item_Productos">Productos</string>
+    <string name="Item_Agregar">Agregar</string>
     <string name="Item_Inicio">Inicio</string>
     <string name="Item_Cuenta">Cuenta</string>
 
@@ -50,4 +50,9 @@
 
 
 
+    <string name="catalogo_titulo">Elige un producto</string>
+    <string name="catalogo_descripcion">Toca un producto para registrar su venta.</string>
+    <string name="suplementos">Suplementos</string>
+    <string name="membresias">Membresías</string>
+    <string name="tocar_vender">Toca para vender</string>
 </resources>

@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.appgimnasio.OpcionesLogin
-import com.example.appgimnasio.R
 import com.example.appgimnasio.databinding.FragmentCuentaBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot

@@ -51,20 +51,25 @@
         android:layout_alignParentBottom="true"
         app:menu="@menu/mi_menu"
         app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/navigation_item"
+        app:itemTextColor="@color/navigation_item"
+        app:itemActiveIndicatorStyle="@style/NavigationIndicator"
+        app:itemHorizontalTranslationEnabled="false"
         android:background="@color/surface_variant"
         />
 
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/FAB"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_agregar"
-        android:backgroundTint="@color/lime"
-        android:tint="@color/on_lime"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
-        />
-
+        android:contentDescription="@string/Item_Agregar"
+        android:src="@drawable/ic_agregar"
+        app:backgroundTint="@color/lime"
+        app:tint="@color/on_lime" />
 </RelativeLayout>
 
